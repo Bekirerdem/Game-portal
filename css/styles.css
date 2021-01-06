@@ -150,8 +150,12 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #fefefe;
+}
+
+h3 {
+  font-size: 2.4rem;
 }
 
 h4 {
@@ -354,7 +358,7 @@ img {
 .latest-news-title {
   flex-basis: 25%;
   text-align: right;
-  padding-right: 2rem;
+  padding-right: 3rem;
 }
 
 .latest-news-content {
@@ -384,9 +388,68 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-row-gap: 4rem;
-  grid-column-gap: 8rem;
+  grid-row-gap: 3rem;
+  grid-column-gap: 4rem;
   grid-template-areas: 'item-1 item-1 item-1 item-2' 'item-3 item-4 item-5 item-6';
+}
+
+.recent-games-content .recent-game-featured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recent-games-content .recent-game-featured .recent-game-thumbnail {
+  height: 100%;
+}
+
+.recent-games-content .recent-game-featured .recent-game-thumbnail img {
+  height: 100%;
+}
+
+.recent-games-content .recent-game-featured-thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+
+.recent-games-content .recent-game-featured-thumbnail img {
+  width: 100%;
+  transition: all .5s;
+}
+
+.recent-games-content .recent-game-featured-thumbnail::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(229, 21, 21, 0.5);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.recent-games-content .recent-game-featured:hover .recent-game-thumbnail::after, .recent-games-content .recent-game-featured:focus .recent-game-thumbnail::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.recent-games-content .recent-game-featured:hover .recent-game-thumbnail img, .recent-games-content .recent-game-featured:focus .recent-game-thumbnail img {
+  transform: scale(1.1) rotate(5deg);
+  transition: all .5s;
+}
+
+.recent-games-content .recent-game-featured:hover .recent-game-thumbnail .rating, .recent-games-content .recent-game-featured:focus .recent-game-thumbnail .rating {
+  opacity: 1;
+  transition: all .5s;
+}
+
+.recent-games-content .recent-game-featured .rating {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
 }
 
 .recent-games-content .recent-game {
@@ -410,7 +473,7 @@ img {
   top: 0;
   left: 0;
   content: '';
-  background-color: rgba(229, 21, 21, 0.8);
+  background-color: rgba(229, 21, 21, 0.5);
   width: 100%;
   height: 100%;
   visibility: hidden;
@@ -438,7 +501,7 @@ img {
 }
 
 .recent-games-content .recent-game-content .game-header {
-  margin-bottom: 1.4rem;
+  margin-bottom: 2rem;
   font-size: 2.4rem;
 }
 
@@ -452,7 +515,8 @@ img {
 }
 
 .recent-games-content .recent-game-content .game-title {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: .1rem;
   font-size: 1.7rem;
 }
 
@@ -468,12 +532,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   margin-bottom: 1rem;
 }
 
 .recent-games-content .recent-game-content .game-meta .game-date {
   color: #ffb320;
+  font-size: 1.4rem;
 }
 
 .recent-games-content .recent-game-content .game-meta .game-comment {
@@ -483,7 +548,7 @@ img {
 
 .recent-games-content .recent-game-content p {
   font-size: 1.3rem;
-  line-height: 1.7rem;
+  line-height: 2rem;
 }
 
 .recent-games-content .recent-game-1 {
