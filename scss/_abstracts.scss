@@ -40,7 +40,16 @@ $light-color: #fefefe;
 }
 
 .text-primary {
-    color: $primary-color;
+    background-image: linear-gradient(to right, $light-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.text-primary-1 {
+    background-image: linear-gradient(to left, $light-color, $secondary-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /** MIXINS **/
