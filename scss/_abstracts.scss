@@ -31,6 +31,12 @@ $light-color: #fefefe;
     }
 }
 
+.m {
+    &-1 {
+        margin: 1rem;
+    }
+}
+
 .text-light {
     color: $light-color;
 }

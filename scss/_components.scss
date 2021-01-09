@@ -136,3 +136,64 @@
         }
     }
 }
+
+/** CARDS **/
+.card {
+    height: 40rem;
+    perspective: 1000px;
+
+    &-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .card-front, .card-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: all 1s;
+    }
+
+    .card-front {
+        background-color: $secondary-color;
+    }
+
+    .card-back {
+        background-color: $secondary-color;
+        transform: rotateY(180deg);
+        display: table;
+
+        &-content {
+            display: table-cell;
+            vertical-align: middle;
+
+            p {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                transition: all .5s;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    &:hover .card-front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover .card-back {
+        transform: none;
+    }
+    
+}
+
