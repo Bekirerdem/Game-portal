@@ -10,6 +10,10 @@
     letter-spacing: 2px;
     transition: all .5s;
 
+    @include media (medium) {
+        padding: .5rem 1rem;
+    }
+
     &:hover {
     background-color: $primary-color;
     color: $light-color;
@@ -76,12 +80,22 @@
     border-bottom: 1px solid $primary-color;
     transform: skew(-25deg);
 
+    @include media (large) {
+        transform: skew(0deg);
+        border: none;
+        margin: 0;
+    }
+
     &-title {
         margin-bottom: 1.5rem;
     }
 
     & > * {
         transform: skew(25deg);
+
+        @include media (large) {
+            transform: skew(0deg);
+        }
     }
 
     &-tags {
@@ -142,6 +156,18 @@
     height: 40rem;
     perspective: 1000px;
 
+    @include media(large) {
+        height: 35rem;
+    }
+
+    @include media(medium) {
+        height: 30rem;
+    }
+
+    @include media(small) {
+        height: 25rem;
+    }
+
     &-inner {
         position: relative;
         width: 100%;
@@ -196,4 +222,3 @@
     }
     
 }
-
